@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Interview Platform{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    {% block extra_css %}{% endblock %}
+    <style>
+    .top-header {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: var(--card-background, #fff);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        position: relative;
+        z-index: 10;
+    }
+    .profile-section {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .profile-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: #eee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: #888;
+    }
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .profile-name {
+        font-weight: 600;
+        color: var(--text-primary, #222);
+    }
+    .profile-email {
+        font-size: 0.9rem;
+        color: var(--text-secondary, #666);
+    }
+    </style>
+</head>
+<body {% block body_class %}{% endblock %}>
+    <div class="top-header">
+        <div class="profile-section">
+            <div class="profile-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="profile-info">
+                {% if user.is_authenticated %}
+                    <span class="profile-name">{{ user.get_full_name|default:user.username }}</span>
+                    <span class="profile-email">{{ user.email }}</span>
+                {% else %}
+                    <span class="profile-name">Guest</span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% block content %}{% endblock %}
+    <script src="{% static 'js/script.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html> 

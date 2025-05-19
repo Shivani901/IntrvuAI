@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Platform - Upload Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <nav class="sidebar">
+        <div class="logo">
+            <h2>InterviewPro</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="active"><a href="resume-upload.html"><i class="fas fa-file-upload"></i> Upload Resume</a></li>
+            <li><a href="start-interview.html"><i class="fas fa-video"></i> Start Interview</a></li>
+            <li><a href="feedback.html"><i class="fas fa-comment"></i> Feedback</a></li>
+            <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <header class="dashboard-header">
+            <h1>Upload Your Resume</h1>
+        </header>
+
+        <div class="upload-container">
+            <div class="upload-box" id="dropZone">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <h3>Drag & Drop your resume here</h3>
+                <p>or</p>
+                <label for="fileInput" class="btn-primary">Choose File</label>
+                <input type="file" id="fileInput" accept=".pdf,.doc,.docx" hidden>
+                <p class="file-types">Supported formats: PDF, DOC, DOCX</p>
+            </div>
+
+            <div class="upload-info">
+                <h3>Resume Guidelines</h3>
+                <ul>
+                    <li>Maximum file size: 5MB</li>
+                    <li>Supported formats: PDF, DOC, DOCX</li>
+                    <li>Make sure your resume is up to date</li>
+                    <li>Include your latest work experience</li>
+                </ul>
+            </div>
+
+            <div class="current-resume" id="currentResume" style="display: none;">
+                <h3>Current Resume</h3>
+                <div class="resume-preview">
+                    <i class="fas fa-file-pdf"></i>
+                    <span id="fileName">resume.pdf</span>
+                    <button class="btn-secondary" id="removeResume">Remove</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html> 

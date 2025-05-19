@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Interview Platform - Profile{% endblock %}
+
+{% block body_class %}dashboard-body{% endblock %}
+
+{% block content %}
+<nav class="sidebar">
+    <div class="logo">
+        <h2>InterviewPro</h2>
+    </div>
+    <ul class="nav-links">
+        <li><a href="{% url 'dashboard' %}"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="{% url 'resume_upload' %}"><i class="fas fa-file-upload"></i> Upload Resume</a></li>
+        <li><a href="{% url 'start_interview' %}"><i class="fas fa-video"></i> Start Interview</a></li>
+        <li><a href="{% url 'feedback' %}"><i class="fas fa-comment"></i> Feedback</a></li>
+        <li><a href="{% url 'history' %}"><i class="fas fa-history"></i> History</a></li>
+        <li class="active"><a href="{% url 'profile' %}"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+    </ul>
+</nav>
+
+<main class="main-content">
+    <header class="dashboard-header">
+        <h1>User Profile</h1>
+    </header>
+
+    <div class="card profile-details">
+        <h2>{{ fullname }}</h2>
+        <p><i class="fas fa-envelope"></i> {{ email }}</p>
+        <!-- More profile details can be added here -->
+    </div>
+
+    <div class="card">
+        <p>Your profile information will be displayed here.</p>
+        <!-- Later, we can populate this with actual profile data -->
+    </div>
+</main>
+{% endblock %} 

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Platform - Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <nav class="sidebar">
+        <div class="logo">
+            <h2>InterviewPro</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="resume-upload.html"><i class="fas fa-file-upload"></i> Upload Resume</a></li>
+            <li><a href="start-interview.html"><i class="fas fa-video"></i> Start Interview</a></li>
+            <li class="active"><a href="feedback.html"><i class="fas fa-comment"></i> Feedback</a></li>
+            <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <header class="dashboard-header">
+            <h1>Interview Feedback</h1>
+        </header>
+
+        <div class="feedback-container">
+            <div class="feedback-summary">
+                <div class="score-card">
+                    <div class="score-circle">
+                        <span class="score">85</span>
+                        <span class="score-label">Score</span>
+                    </div>
+                    <div class="score-details">
+                        <div class="score-item">
+                            <span class="label">Technical Score</span>
+                            <span class="value">90%</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="label">Communication</span>
+                            <span class="value">85%</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="label">Problem Solving</span>
+                            <span class="value">80%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interview-details">
+                    <h3>Interview Details</h3>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Date: March 15, 2024</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Duration: 45 minutes</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-code"></i>
+                            <span>Type: Technical Interview</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Role: Software Engineer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feedback-sections">
+                <div class="feedback-section">
+                    <h3>Strengths</h3>
+                    <ul class="feedback-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Strong understanding of algorithms and data structures</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Clear and concise communication</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Good problem-solving approach</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feedback-section">
+                    <h3>Areas for Improvement</h3>
+                    <ul class="feedback-list">
+                        <li>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>Could provide more detailed explanations for system design questions</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>Consider edge cases more thoroughly</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feedback-section">
+                    <h3>Question-wise Feedback</h3>
+                    <div class="question-feedback">
+                        <div class="question-item">
+                            <div class="question-header">
+                                <span class="question-number">Q1</span>
+                                <span class="question-score correct">Correct</span>
+                            </div>
+                            <p class="question-text">What is the time complexity of a binary search algorithm?</p>
+                            <div class="feedback-text">
+                                <strong>Your Answer:</strong> O(log n)
+                                <strong>Feedback:</strong> Excellent understanding of time complexity.
+                            </div>
+                        </div>
+
+                        <div class="question-item">
+                            <div class="question-header">
+                                <span class="question-number">Q2</span>
+                                <span class="question-score partial">Partial</span>
+                            </div>
+                            <p class="question-text">Explain the concept of dependency injection.</p>
+                            <div class="feedback-text">
+                                <strong>Your Answer:</strong> [Your answer here]
+                                <strong>Feedback:</strong> Good basic understanding, but could elaborate more on practical applications.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-section">
+                    <h3>Recommendations</h3>
+                    <div class="recommendations">
+                        <div class="recommendation-item">
+                            <i class="fas fa-book"></i>
+                            <div class="recommendation-content">
+                                <h4>Study Materials</h4>
+                                <p>Review system design patterns and best practices</p>
+                            </div>
+                        </div>
+                        <div class="recommendation-item">
+                            <i class="fas fa-code"></i>
+                            <div class="recommendation-content">
+                                <h4>Practice Areas</h4>
+                                <p>Focus on edge cases and boundary conditions in problem-solving</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feedback-actions">
+                <button class="btn-primary" onclick="window.location.href='start-interview.html'">
+                    <i class="fas fa-redo"></i> Start New Interview
+                </button>
+                <button class="btn-secondary" onclick="window.print()">
+                    <i class="fas fa-print"></i> Download Report
+                </button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html> 

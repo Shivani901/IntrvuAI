@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Platform - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <nav class="sidebar">
+        <div class="logo">
+            <h2>InterviewPro</h2>
+        </div>
+        <ul class="nav-links">
+            <li class="active"><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="resume-upload.html"><i class="fas fa-file-upload"></i> Upload Resume</a></li>
+            <li><a href="start-interview.html"><i class="fas fa-video"></i> Start Interview</a></li>
+            <li><a href="feedback.html"><i class="fas fa-comment"></i> Feedback</a></li>
+            <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <header class="dashboard-header">
+            <h1>Welcome, <span id="userName">User</span></h1>
+
+        </header>
+
+        <div class="dashboard-grid">
+            <div class="card">
+                <i class="fas fa-file-alt"></i>
+                <h3>Resume Status</h3>
+                <p>Upload your resume to get started</p>
+                <a href="resume-upload.html" class="btn-secondary">Upload Resume</a>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-video"></i>
+                <h3>Start Interview</h3>
+                <p>Begin your AI-powered interview</p>
+                <a href="start-interview.html" class="btn-secondary">Start Now</a>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Performance</h3>
+                <p>View your interview history</p>
+                <a href="#" class="btn-secondary">View History</a>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-comment"></i>
+                <h3>Feedback</h3>
+                <p>Check your interview feedback</p>
+                <a href="feedback.html" class="btn-secondary">View Feedback</a>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html> 
